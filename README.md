@@ -20,7 +20,9 @@ This is a dockerfile that contains miniconda 3 in addition to system packages fo
 
 You can [build a docker image from github url](https://docs.docker.com/engine/reference/commandline/build/#build-with-url) on your device using this command:
 
+```
 docker build github.com/melzoghbi/docker.git#master:rpi-stretch-miniconda3-numpy
+```
 
 The above command will build the docker image from rpi-stretch-miniconda3-numpy folder.
 
