@@ -27,10 +27,14 @@ RUN apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 
 # Install miniconda to /miniconda
-RUN curl -LO http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
-RUN bash Miniconda3-latest-Linux-armv7l.sh -p /miniconda -b
-RUN rm Miniconda3-latest-Linux-armv7l.sh
+RUN curl -LO http://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
+RUN bash Miniconda-latest-Linux-armv7l.sh -p /miniconda -b
+RUN rm Miniconda-latest-Linux-armv7l.sh
 ENV PATH=/miniconda/bin:${PATH}
 RUN conda update -y conda
 
+# Build numpy from source - This is required for latest TensorFlow (ML package)!
+RUN git clone https://github.com/numpy/numpy.git numpy
+RUN cd numpy; git checkout v1.14.2
+RUN cd numpy; python setup.py install --user
 

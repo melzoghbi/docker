@@ -33,8 +33,4 @@ RUN rm Miniconda3-latest-Linux-armv7l.sh
 ENV PATH=/miniconda/bin:${PATH}
 RUN conda update -y conda
 
-# build numpy from source - This is required for latest TensorFlow!
-RUN git clone https://github.com/numpy/numpy.git numpy
-RUN cd numpy; git checkout v1.14.2
-RUN cd numpy; python setup.py install --user
 
