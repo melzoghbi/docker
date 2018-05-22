@@ -12,7 +12,7 @@ RUN sudo apt-get install git curl
 # requirements for pyinstaller
 RUN sudo apt-get install -y build-essential python3-dev
 
-# LED packages
+# NeoPixel LED packages prerequisites 
 RUN sudo apt-get install -y scons swig cython
 RUN pip3 install setuptools
 
