@@ -17,6 +17,9 @@ This is a dockerfile that contains miniconda in addition to system packages for 
 4. **rpi-stretch-miniconda3-numpy**:
 This is a dockerfile that contains miniconda 3 in addition to system packages for Microsoft IoT Hub, Python 3.4, numpy and more.  This is useful if you are planning to use Machine Learning libraries such as: TensorFlow which requires numpy. The reason for compiling numpy from source is due to issues running TF using pip install numpy or conda install numpy on the Raspberry PI.
 
+4. **rpi-stretch-miniconda3-neopixel**:
+This is a dockerfile that contains miniconda 3 in addition to system packages for Microsoft IoT Hub, Python 3.4, numpy, [pyinstaller](https://www.pyinstaller.org/), [NeoPixel](https://github.com/jgarff/rpi_ws281x) and more.  This is useful if you are planning to use Machine Learning libraries such as: TensorFlow which requires numpy. The reason for compiling numpy from source is due to issues running TF using pip install numpy or conda install numpy on the Raspberry PI.
+
 
 You can [build a docker image from github url](https://docs.docker.com/engine/reference/commandline/build/#build-with-url) on your device using this command:
 
